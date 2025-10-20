@@ -107,7 +107,7 @@ const Contact = () => {
               </div>
               <div>
                 <h3>Call Us</h3>
-                <p><img src="/divine-systems/phone.svg" alt="Phone Number" style={{ verticalAlign: 'middle', height: '20px' }} /></p>
+                <p><img src="/divine-systems/phone-contact.svg" alt="Phone Number" className="phone-number-img" style={{ verticalAlign: 'middle', height: '20px' }} /></p>
                 <p>Mon-Fri: 9AM - 6PM CST</p>
               </div>
             </div>

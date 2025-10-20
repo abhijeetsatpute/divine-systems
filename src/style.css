@@ -984,6 +984,14 @@ html {
   color: #d1d5db;
 }
 
+.phone-number-img {
+  filter: brightness(0) saturate(100%);
+}
+
+[data-theme="dark"] .phone-number-img {
+  filter: brightness(0) saturate(100%) invert(100%);
+}
+
 /* Contact Form */
 .contact-form-wrapper {
   background: var(--card-bg);
