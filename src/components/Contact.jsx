@@ -107,8 +107,8 @@ const Contact = () => {
               </div>
               <div>
                 <h3>Call Us</h3>
-                <p>+1 (630) 885-1802</p>
-                <p>Mon-Fri: 9AM - 6PM EST</p>
+                <p><img src="/divine-systems/phone.svg" alt="Phone Number" style={{ verticalAlign: 'middle', height: '20px' }} /></p>
+                <p>Mon-Fri: 9AM - 6PM CST</p>
               </div>
             </div>
 
@@ -129,7 +129,7 @@ const Contact = () => {
               </div>
               <div>
                 <h3>Business Hours</h3>
-                <p>Monday - Friday: 9AM - 6PM</p>
+                <p>Monday - Friday: 9AM - 6PM CST</p>
                 <p>Weekend: By Appointment</p>
               </div>
             </div>

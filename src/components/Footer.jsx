@@ -70,7 +70,7 @@ const Footer = () => {
               <i className="fas fa-envelope"></i> info@divinesystems.com
             </p>
             <p>
-              <i className="fas fa-phone"></i> +1 (630) 885-1802
+              <i className="fas fa-phone"></i> <img src="/divine-systems/phone.svg" alt="Phone Number" style={{ verticalAlign: 'middle', height: '16px' }} />
             </p>
             <p>
               <i className="fas fa-map-marker-alt"></i> Global Data Solutions
