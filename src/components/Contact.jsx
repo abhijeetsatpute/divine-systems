@@ -1,83 +1,92 @@
-import { useState, useRef } from 'react'
-import emailjs from '@emailjs/browser'
+import { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
-  const form = useRef()
+  const form = useRef();
   const [formData, setFormData] = useState({
-    user_name: '',
-    user_email: '',
-    user_phone: '',
-    subject: '',
-    message: '',
-  })
+    user_name: "",
+    user_email: "",
+    user_phone: "",
+    subject: "",
+    message: "",
+  });
   const [status, setStatus] = useState({
     submitting: false,
     submitted: false,
     error: false,
-    message: '',
-  })
+    message: "",
+  });
 
   const handleChange = (e) => {
-    const { name, value } = e.target
+    const { name, value } = e.target;
     setFormData((prev) => ({
       ...prev,
       [name]: value,
-    }))
-  }
+    }));
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-    setStatus({ submitting: true, submitted: false, error: false, message: '' })
+    e.preventDefault();
+    setStatus({
+      submitting: true,
+      submitted: false,
+      error: false,
+      message: "",
+    });
 
     // EmailJS configuration
     // Replace these with your actual EmailJS credentials
-    const serviceId = 'YOUR_SERVICE_ID'
-    const templateId = 'YOUR_TEMPLATE_ID'
-    const publicKey = 'YOUR_PUBLIC_KEY'
+    const serviceId = "service_zm2dw3m";
+    const templateId = "template_kv0p6l8";
+    const publicKey = "NVi28XEQ0dZ1Ydmso";
 
-    emailjs
-      .sendForm(serviceId, templateId, form.current, publicKey)
-      .then(
-        (result) => {
-          console.log('Email sent successfully:', result.text)
-          setStatus({
-            submitting: false,
-            submitted: true,
-            error: false,
-            message: 'Message sent successfully! We\'ll get back to you soon.',
-          })
-          // Reset form
-          setFormData({
-            user_name: '',
-            user_email: '',
-            user_phone: '',
-            subject: '',
-            message: '',
-          })
-          // Reset success message after 5 seconds
-          setTimeout(() => {
-            setStatus({ submitting: false, submitted: false, error: false, message: '' })
-          }, 5000)
-        },
-        (error) => {
-          console.error('Email send failed:', error.text)
+    emailjs.sendForm(serviceId, templateId, form.current, publicKey).then(
+      (result) => {
+        console.log("Email sent successfully:", result.text);
+        setStatus({
+          submitting: false,
+          submitted: true,
+          error: false,
+          message: "Message sent successfully! We'll get back to you soon.",
+        });
+        // Reset form
+        setFormData({
+          user_name: "",
+          user_email: "",
+          user_phone: "",
+          subject: "",
+          message: "",
+        });
+        // Reset success message after 5 seconds
+        setTimeout(() => {
           setStatus({
             submitting: false,
             submitted: false,
-            error: true,
-            message: 'Failed to send message. Please try again or contact us directly.',
-          })
-        }
-      )
-  }
+            error: false,
+            message: "",
+          });
+        }, 5000);
+      },
+      (error) => {
+        console.error("Email send failed:", error.text);
+        setStatus({
+          submitting: false,
+          submitted: false,
+          error: true,
+          message:
+            "Failed to send message. Please try again or contact us directly.",
+        });
+      }
+    );
+  };
 
   return (
     <section
       className="section"
       id="contact"
       style={{
-        backgroundColor: 'var(--card-bg)',
-        borderTop: '3px solid var(--secondary)',
+        backgroundColor: "var(--card-bg)",
+        borderTop: "3px solid var(--secondary)",
       }}
     >
       <div className="container">
@@ -107,7 +116,14 @@ const Contact = () => {
               </div>
               <div>
                 <h3>Call Us</h3>
-                <p><img src="/divine-systems/phone-contact.svg" alt="Phone Number" className="phone-number-img" style={{ verticalAlign: 'middle', height: '20px' }} /></p>
+                <p>
+                  <img
+                    src="/divine-systems/phone-contact.svg"
+                    alt="Phone Number"
+                    className="phone-number-img"
+                    style={{ verticalAlign: "middle", height: "20px" }}
+                  />
+                </p>
                 <p>Mon-Fri: 9AM - 6PM CST</p>
               </div>
             </div>
@@ -218,12 +234,12 @@ const Contact = () => {
               {status.message && (
                 <div
                   className={`form-status ${
-                    status.error ? 'form-status-error' : 'form-status-success'
+                    status.error ? "form-status-error" : "form-status-success"
                   }`}
                 >
                   <i
                     className={`fas fa-${
-                      status.error ? 'exclamation-circle' : 'check-circle'
+                      status.error ? "exclamation-circle" : "check-circle"
                     }`}
                   ></i>
                   {status.message}
@@ -250,7 +266,7 @@ const Contact = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;
