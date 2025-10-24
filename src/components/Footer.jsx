@@ -6,7 +6,7 @@ const Footer = () => {
           <div className="footer-section">
             <div className="footer-logo">
               <img
-                src="/divine-systems/logo.png"
+                src="logo.png"
                 alt="Divine Systems Logo"
                 className="footer-logo-image"
               />
@@ -70,7 +70,12 @@ const Footer = () => {
               <i className="fas fa-envelope"></i> info@divinesystems.com
             </p>
             <p>
-              <i className="fas fa-phone"></i> <img src="/divine-systems/phone-footer.svg" alt="Phone Number" style={{ verticalAlign: 'middle', height: '16px' }} />
+              <i className="fas fa-phone"></i>{" "}
+              <img
+                src="phone-footer.svg"
+                alt="Phone Number"
+                style={{ verticalAlign: "middle", height: "16px" }}
+              />
             </p>
             <p>
               <i className="fas fa-map-marker-alt"></i> Global Data Solutions

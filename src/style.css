@@ -661,7 +661,7 @@ html {
 /* Scroll to Top Button */
 .scroll-top {
   position: fixed;
-  bottom: 2rem;
+  bottom: 6.5rem;
   right: 2rem;
   background: var(--secondary);
   color: white;
@@ -1170,5 +1170,32 @@ html {
 
   .contact-info-item {
     padding: 1.25rem;
+  }
+}
+
+/* Zapier Chatbot Styles */
+.zapier-chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+/* Ensure chatbot works well with dark theme */
+[data-theme="dark"] .zapier-chatbot-container {
+  /* The chatbot styling is handled by Zapier's component */
+  /* This ensures proper z-index and positioning in dark mode */
+}
+
+/* Mobile responsiveness for chatbot */
+@media (max-width: 768px) {
+  .zapier-chatbot-container {
+    bottom: 10px;
+    right: 10px;
+  }
+
+  .scroll-top {
+    bottom: 90px;
+    right: 10px;
   }
 }

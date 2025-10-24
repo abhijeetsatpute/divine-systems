@@ -8,6 +8,7 @@ import Value from './components/Value'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
+import ZapierChatbot from './components/ZapierChatbot'
 import useTheme from './hooks/useTheme'
 import useScrollAnimations from './hooks/useScrollAnimations'
 
@@ -30,6 +31,7 @@ function App() {
       <Contact />
       <Footer />
       <ScrollToTop />
+      <ZapierChatbot />
     </div>
   )
 }

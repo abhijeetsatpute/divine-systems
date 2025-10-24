@@ -118,7 +118,7 @@ const Contact = () => {
                 <h3>Call Us</h3>
                 <p>
                   <img
-                    src="/divine-systems/phone-contact.svg"
+                    src="phone-contact.svg"
                     alt="Phone Number"
                     className="phone-number-img"
                     style={{ verticalAlign: "middle", height: "20px" }}
